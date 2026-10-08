@@ -16,31 +16,6 @@ enum EvidenceError {
     Missing
 }
 
-trait QueryApi {
-    fn query<T>(&self, query: &str) -> Result<T, EvidenceError>;
-}
-
-
-trait Check {
-    type View;
-
-    fn extract(
-        &self,
-        results: &dyn QueryApi,
-    ) -> Result<Self::View, EvidenceError>;
-
-    fn validate(
-        &self,
-        view: &Self::View,
-    ) -> CheckResult;
-
-    fn report(
-        &self,
-        view: &Self::View,
-        result: &CheckResult,
-    ) -> ReportSection;
-}
-
 
 /// ------- Try 2
 ///
