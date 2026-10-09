@@ -25,8 +25,11 @@ domain vocabulary, and rules for extending the design.
 
 | Path | Purpose |
 | --- | --- |
-| `src/lib.rs` | Evolving framework interface sketches |
-| `src/helpers.rs` | Supporting type placeholders |
+| `src/lib.rs` | Module declarations and public re-exports |
+| `src/declaration.rs` | Test declarations, run plans, and source-set contract |
+| `src/execution.rs` | Load generation, recording/retrieval, and execution contracts |
+| `src/evaluation.rs` | Evidence access, extraction, validation, and reporting contracts |
+| `scratch/` | Uncompiled API sketches and experiments |
 | `docs/architecture.md` | Agreed architecture decisions |
 
 ## Origin
