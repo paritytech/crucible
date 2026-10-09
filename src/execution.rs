@@ -20,6 +20,7 @@ pub trait Retriever {
     fn retrieve(&self, results: &RecordedRun) -> Result<Vec<Self::Record>, EvidenceError>;
 }
 
+///Thats on purpose! We always want a Recorder to impl. as well a way to retrieve those data
 pub trait Recorder: Retriever {
     fn interval(&self) -> Duration;
     async fn record(&mut self, context: &RecordingContext) -> Result<Self::Record, RecordingError>;
